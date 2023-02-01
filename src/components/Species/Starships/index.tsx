@@ -7,7 +7,7 @@ const Starships = ({starships}: any) => {
         <div className="container">
             <div className="row">
                 {starships.map((starship: IStarship, key:number) => (
-                    <div className="col-4 mt-5 card" key={key}>
+                    <div className="col-4 mt-3 card" key={key}>
                         <Link to={`${starship.name.replace(/\s/g, '')}/films`}>                           
                             <ul className="list-group list-group-flush">
                                 <li className="list-group-item">

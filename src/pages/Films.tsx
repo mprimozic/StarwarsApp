@@ -24,11 +24,7 @@ const Films = ({starships} :any) => {
                 setIsLoad(true);
             }
         );
-        console.log(films);
-
-
     }, [params])
-
 
     return(
         <>

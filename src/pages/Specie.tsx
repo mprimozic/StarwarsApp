@@ -17,6 +17,7 @@ import { getStarships } from '../services/starships';
 import Starships from '../components/Species/Starships';
 import DeleteSpecie from '../components/Species/DeleteSpecie';
 import Films from './Films';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Specie = ({ species }: TSpecies): JSX.Element => {
     const [isLoad, setIsLoad] = useState<boolean>(false);
@@ -218,13 +219,13 @@ const Specie = ({ species }: TSpecies): JSX.Element => {
                     }
                     {(specieName === 'Wookie') &&
                         <>
+                            <Breadcrumb></Breadcrumb>
                             <Starships starships={starships}/>
                             <Routes>                           
                                 <Route path=":starship/films" element={<Films starships={starships}/>}></Route>
                             </Routes>
                         </>
                     }
-
                 </> 
             }
             
